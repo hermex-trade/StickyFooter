@@ -11,6 +11,7 @@
             :visible-from-offset="{{ visibleFromOffset|json_encode }}"
         <div{% if isPreview %} data-builder-child-container="content"{% endif %}>{{ children.content | raw }}</div>
     </sticky-footer>
+    {% endif %}
 {% else %}
     <p>Bitte StickyFooter Widget Einstellungen kontrollieren.</p>
 {% endif %}
