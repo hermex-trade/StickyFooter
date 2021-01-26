@@ -51,7 +51,6 @@ class StickyFooterWidget extends BaseWidget
     {
         $settings = pluginApp(WidgetSettingsFactory::class);
 
-        $settings->createCustomClass();
         $this->create_offset_settings($settings);
 
         return $settings->toArray();
