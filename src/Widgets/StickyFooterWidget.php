@@ -40,7 +40,7 @@ class StickyFooterWidget extends BaseWidget
     public function getData()
     {
         return WidgetDataFactory::make("StickyFooter::StickyFooter")
-            ->withLabel("Widget.stepsLabel")
+            ->withLabel("Widgets.stepsLabel")
             ->withPreviewImageUrl("/images/widgets/stickyFooter.svg")
             ->withMaxPerPage(1)
             ->withType(WidgetTypes::STATIC)
@@ -66,12 +66,12 @@ class StickyFooterWidget extends BaseWidget
     private function create_offset_settings($settings): void
     {
         $offsets = $settings->createVerticalContainer("offsets")
-            ->withName("Widget.offsetLabel");
+            ->withName("Widgets.offsetLabel");
 
         $offsets->children->createText("visibleFromOffset")
-            ->withName("Widget.visibleFromOffsetLabel")
+            ->withName("Widgets.visibleFromOffsetLabel")
             ->withDefaultValue("0")
-            ->withToolTip("Widget.showFooterTooltip");
+            ->withToolTip("Widgets.showFooterTooltip");
     }
 
 }
