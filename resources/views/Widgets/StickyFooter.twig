@@ -5,12 +5,14 @@
 
 {% if visibleFromOffset is not empty %}
     {% if isPreview %}
-            <div>
-                <div class="my-4" data-builder-child-container=first">{{ children.first | raw }}</div>
+        <div class="widget-inner">
+            <div data-builder-child-container="customContainer">
+                {{ children.customContainer | raw }}
             </div>
+        </div>
     {% else %}
         <sticky-footer :visible-from-offset="{{ visibleFromOffset|json_encode }}">
-            <div class="my-4" data-builder-child-container="first">{{ children.first | raw }}</div>
+            <div data-builder-child-container="first">{{ children.first | raw }}</div>
         </sticky-footer>
     {% endif %}
 {% else %}
