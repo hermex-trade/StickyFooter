@@ -1,0 +1,19 @@
+{
+  "name"              : "StickyFooter",
+  "namespace"         : "StickyFooter",
+  "type"              : "widgets",
+  "version"           : "0.0.4",
+  "pluginIcon"        : "",
+  "description"       : "A Plenty-Markets Plugin.",
+  "author"            : "Nicolas Andrea Almy - Hermex Trade",
+  "authorIcon"        : "",
+  "email"             : "nicolas.almy@gmail.com",
+  "phone"             : "",
+  "serviceProvider"   : "StickyFooter\\Providers\\StickyFooterServiceProvider",
+  "containers"        : [],
+  "dataProviders"     : [],
+  "javaScriptFiles"   : [],
+  "require"           : ["Ceres", "IO"],
+  "dependencies"      : [],
+  "runOnBuild"        : []
+}
