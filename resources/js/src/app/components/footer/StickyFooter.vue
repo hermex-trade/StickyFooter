@@ -35,19 +35,12 @@ export default {
 }
 </script>
 
-<style>
-#page-header {
-  margin-bottom: 200px;
-}
-</style>
-
 <style scoped>
 #sticky-footer {
   position: fixed;
   bottom: 0;
   background: green;
   height: 200px;
-  width: 100%;
 }
 .visible {
   visibility: visible;
