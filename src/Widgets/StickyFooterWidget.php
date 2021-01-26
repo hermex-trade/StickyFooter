@@ -40,7 +40,7 @@ class StickyFooterWidget extends BaseWidget
     public function getData()
     {
         return WidgetDataFactory::make("StickyFooter::StickyFooter")
-            ->withLabel("Widgets.stepsLabel")
+            ->withLabel("Widgets.stickyFooterLabel")
             ->withPreviewImageUrl("/images/widgets/stickyFooter.svg")
             ->withMaxPerPage(1)
             ->withType(WidgetTypes::STATIC)
