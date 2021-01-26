@@ -1,7 +1,4 @@
-{% set stickyFooter = widget.settings.stickyFooter.mobile %}
-
-{% set backgroundColor = widget.settings.backgroundColor.mobile %}
-{% set visibleFromOffset = widget.settings.visibleFromOffset.mobile %}
+{% set visibleFromOffset = widget.settings.offsets.visibleFromOffset.mobile %}
 
 {% if visibleFromOffset is not empty %}
     {% if isPreview %}
@@ -12,7 +9,7 @@
         </div>
     {% else %}
         <sticky-footer :visible-from-offset="{{ visibleFromOffset|json_encode }}">
-            <div data-builder-child-container="first">{{ children.first | raw }}</div>
+            <div data-builder-child-container="customContainer">{{ children.customContainer | raw }}</div>
         </sticky-footer>
     {% endif %}
 {% else %}
