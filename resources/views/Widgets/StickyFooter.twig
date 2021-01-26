@@ -5,12 +5,13 @@
 
 {% if visibleFromOffset is not empty %}
     {% if isPreview %}
-        <div class="my-4" data-builder-child-container="content"{% endif %}>{{ children.content | raw }}</div>
+            <div>
+                <div class="my-4" data-builder-child-container=first">{{ children.first | raw }}</div>
+            </div>
     {% else %}
-    <sticky-footer
-            :visible-from-offset="{{ visibleFromOffset|json_encode }}"
-        <div{% if isPreview %} data-builder-child-container="content"{% endif %}>{{ children.content | raw }}</div>
-    </sticky-footer>
+        <sticky-footer :visible-from-offset="{{ visibleFromOffset|json_encode }}">
+            <div class="my-4" data-builder-child-container="first">{{ children.first | raw }}</div>
+        </sticky-footer>
     {% endif %}
 {% else %}
     <p>Bitte StickyFooter Widget Einstellungen kontrollieren.</p>
