@@ -3,13 +3,13 @@
 {% if visibleFromOffset is not empty %}
     {% if isPreview %}
         <div class="widget-inner">
-            <div data-builder-child-container="customContainer">
-                {{ children.customContainer | raw }}
+            <div data-builder-child-container="stickyFooterContainer">
+                {{ children.stickyFooterContainer | raw }}
             </div>
         </div>
     {% else %}
-        <sticky-footer :visible-from-offset="{{ visibleFromOffset|json_encode }}">
-            <div data-builder-child-container="customContainer">{{ children.customContainer | raw }}</div>
+        <sticky-footer id="sticky-widget" :visible-from-offset="{{ visibleFromOffset|json_encode }}">
+            <div data-builder-child-container="stickyFooterContainer">{{ children.stickyFooterContainer | raw }}</div>
         </sticky-footer>
     {% endif %}
 {% else %}

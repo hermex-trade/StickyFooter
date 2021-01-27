@@ -1,5 +1,5 @@
 <template>
-  <div id="sticky-footer" :class="{visible: scrollPosition > visibleFromOffset, hidden: scrollPosition < visibleFromOffset}">
+  <div :class="{visible: scrollPosition > visibleFromOffset, hidden: scrollPosition < visibleFromOffset}">
     <slot></slot>
   </div>
 </template>
@@ -32,13 +32,16 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 #sticky-footer {
   position: fixed;
   bottom: 0;
   background: white;
   height: 200px;
 }
+</style>
+
+<style scoped>
 .visible {
   visibility: visible;
 }
