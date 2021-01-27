@@ -1,9 +1,6 @@
 <template>
-  <div>
-    <main id="page-header"></main>
-    <div id="sticky-footer" :class="{visible: scrollPosition > visibleFromOffset, hidden: scrollPosition < visibleFromOffset}">
-      <slot></slot>
-    </div>
+  <div id="sticky-footer" :class="{visible: scrollPosition > visibleFromOffset, hidden: scrollPosition < visibleFromOffset}">
+    <slot></slot>
   </div>
 </template>
 
@@ -39,7 +36,7 @@ export default {
 #sticky-footer {
   position: fixed;
   bottom: 0;
-  background: green;
+  background: white;
   height: 200px;
 }
 .visible {
