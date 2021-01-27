@@ -1,4 +1,6 @@
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const FixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries");
 const path = require('path')
 
 module.exports = env =>
@@ -8,14 +10,22 @@ module.exports = env =>
         mode: env.prod ? "production" : "development",
         entry: "./resources/js/src/main.js",
         output: {
-            filename: "sticky-footer" + (env.prod ? "-min" : "") + ".js",
-            path: path.resolve(__dirname, './resources/js/dist')
+            path: path.resolve(__dirname, './resources/js/dist'),
+            filename: 'sticky-footer.js',
         },
         module: {
             rules: [
                 {
                     test: /\.vue$/,
-                    loader: 'vue-loader'
+                    loader: 'vue-loader',
+                    options: {
+                        loaders: {
+                            css: [
+                                'vue-style-loader',
+                                'css-loader'
+                            ]
+                        }
+                    }
                 },
                 {
                     test: /\.js$/,
@@ -24,15 +34,19 @@ module.exports = env =>
                 {
                     test: /\.css$/,
                     use: [
-                        'vue-style-loader',
-                        'css-loader'
+                        MiniCssExtractPlugin.loader,
+                        {
+                            loader: 'css-loader',
+                        }
                     ]
                 }
             ]
         },
         plugins: [
-            // make sure to include the plugin for the magic
-            new VueLoaderPlugin()
+            new VueLoaderPlugin(),
+            new MiniCssExtractPlugin({
+                chunkFilename: 'sticky-footer.css'
+            }),
         ]
     }
 }

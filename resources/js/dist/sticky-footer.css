@@ -1,0 +1,15 @@
+
+#sticky-footer {
+  position: fixed;
+  bottom: 0;
+  background: white;
+  height: 200px;
+}
+
+.visible[data-v-1828d636] {
+  visibility: visible;
+}
+.hidden[data-v-1828d636] {
+  visibility: hidden;
+}
+

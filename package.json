@@ -26,6 +26,8 @@
     "webpack-cli": "^3.3.7"
   },
   "dependencies": {
+    "autoprefixer": "^10.2.3",
+    "postcss-loader": "^4.2.0",
     "vue": "^2.6.12",
     "webpack-fix-style-only-entries": "^0.6.1"
   }
