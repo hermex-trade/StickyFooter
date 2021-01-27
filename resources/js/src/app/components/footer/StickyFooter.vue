@@ -38,6 +38,10 @@ export default {
   bottom: 0;
   background: white;
   height: 200px;
+  z-index: 99999;
+}
+.footer {
+  margin-bottom: 200px;
 }
 </style>
 

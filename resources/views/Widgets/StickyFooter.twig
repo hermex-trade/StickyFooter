@@ -8,7 +8,7 @@
             </div>
         </div>
     {% else %}
-        <sticky-footer id="sticky-footer" :visible-from-offset="{{ visibleFromOffset|json_encode }}">
+        <sticky-footer id="sticky-footer" class="col-12" :visible-from-offset="{{ visibleFromOffset|json_encode }}">
             <div data-builder-child-container="stickyFooterContainer">{{ children.stickyFooterContainer | raw }}</div>
         </sticky-footer>
     {% endif %}
